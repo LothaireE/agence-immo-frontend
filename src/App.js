@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./assets/pages/Home.js";
+import Users from "./assets/pages/Users";
+import User from "./assets/pages/User";
+import Header from "./assets/components/Header";
+const apiUrl = "http://localhost:3000/api";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/users" element={<Users apiUrl={apiUrl} />} />
+        <Route path="/user/:id" element={<User apiUrl={apiUrl} />} />
+      </Routes>
+    </Router>
   );
 }
 
