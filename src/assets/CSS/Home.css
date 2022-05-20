@@ -1,0 +1,155 @@
+#result {
+    position: relative;
+    height: 300px;
+  }
+h1 {
+    color:  var(--wave-light-blue);
+
+}
+main{
+    height: 92.5vh;
+}
+  /* Ajoutez les règles #keyframes ici */
+  @keyframes down {
+    from {
+      background-color: var(--wave-light-blue);
+
+      height: 100%;
+    }
+    to {
+      background-color: rgb(62, 106, 163);
+      
+
+      height: 0%;
+    }
+  }
+  /* L'effet de vague est réalisé avec un grand nombre de divs */
+  /* Toutes ces divs partagent des propriétés communes */
+  .box {
+    /* propriétés communes à toutes les box*/
+    width: calc(100% / 22 + 1px);
+    height: 100%;
+    background-color: #85c8dc;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* Faut-il préciser des informations d'animation communes ici ??? */
+    /* Peut-être... */
+    /* ... ou peut-être pas :P */
+    transform-origin: bottom;
+    animation-name: down;
+    animation-duration: 1200ms;
+    animation-timing-function: steps();
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+  }
+  #animated_box1 {
+    left: 0;
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 0ms;
+  }
+  #animated_box2 {
+    left: calc(100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 50ms;
+  }
+  #animated_box3 {
+    left: calc(2 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 100ms;
+  }
+  #animated_box4 {
+    left: calc(3 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 150ms;
+  }
+  #animated_box5 {
+    left: calc(4 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 200ms;
+  }
+  #animated_box6 {
+    left: calc(5 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 250ms;
+  }
+  #animated_box7 {
+    left: calc(6 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 300ms;
+  }
+  #animated_box8 {
+    left: calc(7 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 350ms;
+  }
+  #animated_box9 {
+    left: calc(8 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 400ms;
+  }
+  #animated_box10 {
+    left: calc(9 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 450ms;
+  }
+  #animated_box11 {
+    left: calc(10 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 500ms;
+  }
+  #animated_box12 {
+    left: calc(11 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 550ms;
+  }
+  #animated_box13 {
+    left: calc(12 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 650ms;
+  }
+  #animated_box14 {
+    left: calc(13 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 700ms;
+  }
+  #animated_box15 {
+    left: calc(14 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 750ms;
+  }
+  #animated_box16 {
+    left: calc(15 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 800ms;
+  }
+  #animated_box17 {
+    left: calc(16 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 850ms;
+  }
+  #animated_box18 {
+    left: calc(17 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 900ms;
+  }
+  #animated_box19 {
+    left: calc(18 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 950ms;
+  }
+  #animated_box20 {
+    left: calc(19 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 1050ms;
+  }
+  #animated_box21 {
+    left: calc(20 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 1100ms;
+  }
+  #animated_box22 {
+    left: calc(21 * 100% / 22);
+    /* Ajoutez les options d'animation de la div ici */
+    animation-delay: 1150ms;
+  }

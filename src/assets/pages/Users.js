@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import PageBtn from "../components/PageBtn";
 import UsersList from "../components/UsersList";
 // import { button } from "bootstrap";
+
 const Users = ({ apiUrl }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -27,7 +29,7 @@ const Users = ({ apiUrl }) => {
   ) : (
     <section className="container">
       <h2>Users</h2>
-      <div className="d-flex">
+      {/* <div className="d-flex">
         {page >= 2 && (
           <button class="btn btn-light" onClick={() => setPage(page - 1)}>
             Page précédente
@@ -39,7 +41,8 @@ const Users = ({ apiUrl }) => {
         <button class="btn btn-light" onClick={() => setPage(page + 1)}>
           Page suivante
         </button>
-      </div>
+      </div> */}
+      <PageBtn page={page} setPage={setPage} />
       {data && <UsersList data={data} />}
     </section>
   );
