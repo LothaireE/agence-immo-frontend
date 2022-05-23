@@ -9,13 +9,13 @@ const Realties = ({ apiUrl }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [type, setType] = useState(undefined);
-  const [realties, setRealties] = useState();
+  const [realties, setRealties] = useState("");
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
           // `${apiUrl}/type_realties?type=${type}&page=${page}`
-          `${apiUrl}/type_realties?&page=${page}`
+          `${apiUrl}/type_realties`
         );
         setData(response.data);
         setIsLoading(false);
@@ -24,7 +24,7 @@ const Realties = ({ apiUrl }) => {
       }
     };
     fetchData();
-  }, [apiUrl, page]);
+  }, [apiUrl]);
 
   useEffect(() => {
     const fetchRealty = async () => {
@@ -33,39 +33,44 @@ const Realties = ({ apiUrl }) => {
           `${apiUrl}/realty?type=${type}&page=${page}`
         );
         setRealties(newResponse.data);
+        console.log("newResponse.data", newResponse.data);
       } catch (error) {
         console.log(error.message);
       }
     };
     fetchRealty();
-  }, [type, page]);
+  }, [apiUrl, type, page]);
   return isLoading ? (
     <div>en cours de chargement</div>
   ) : (
-    <div className="container">
-      <h4>realties</h4>
-      <article className="d-flex justify-content-between">
-        {data &&
-          data.records.map((type) => {
-            return (
-              <EstateType
-                key={type.id}
-                apiUrl={apiUrl}
-                type={type}
-                setType={setType}
-              />
-            );
-          })}
+    <div className="container d-flex py-2">
+      <article className="col-2">
+        <h4>Categories :</h4>
+        <div className="d-flex justify-content-between flex-column">
+          {data &&
+            data.records.map((type) => {
+              return (
+                <EstateType
+                  key={type.id}
+                  apiUrl={apiUrl}
+                  type={type}
+                  setType={setType}
+                />
+              );
+            })}
+        </div>
       </article>
-      <div>
-        <PageBtn page={page} setPage={setPage} />
-      </div>
-      <section className="d-flex flex-wrap">
-        {realties &&
-          realties.records.map((eachRealty, index) => {
-            return <EachRealty key={eachRealty.id} eachRealty={eachRealty} />;
-          })}
-      </section>
+      <article className="border">
+        <div>
+          <PageBtn page={page} setPage={setPage} />
+        </div>
+        <div className="d-flex border col-12 flex-wrap">
+          {realties &&
+            realties.records.map((eachRealty, index) => {
+              return <EachRealty key={eachRealty.id} eachRealty={eachRealty} />;
+            })}
+        </div>
+      </article>
     </div>
   );
 };

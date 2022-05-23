@@ -29,19 +29,6 @@ const Users = ({ apiUrl }) => {
   ) : (
     <section className="container">
       <h2>Users</h2>
-      {/* <div className="d-flex">
-        {page >= 2 && (
-          <button class="btn btn-light" onClick={() => setPage(page - 1)}>
-            Page précédente
-          </button>
-        )}
-        <button class="btn btn-light" onClick={() => setPage(1)}>
-          retour à la page 1
-        </button>
-        <button class="btn btn-light" onClick={() => setPage(page + 1)}>
-          Page suivante
-        </button>
-      </div> */}
       <PageBtn page={page} setPage={setPage} />
       {data && <UsersList data={data} />}
     </section>

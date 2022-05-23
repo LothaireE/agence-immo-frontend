@@ -1,7 +1,7 @@
 const PageBtn = ({ page, setPage }) => {
   console.log(page);
   return (
-    <div className="d-flex">
+    <div className="d-flex my-2">
       {page >= 2 && (
         <button class="btn btn-light" onClick={() => setPage(page - 1)}>
           Page précédente
