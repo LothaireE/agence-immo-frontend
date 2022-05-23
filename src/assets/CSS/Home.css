@@ -3,7 +3,7 @@
     height: 300px;
   }
 h1 {
-    color:  var(--wave-light-blue);
+    color:  var(--blue3);
 
 }
 main{
@@ -12,14 +12,13 @@ main{
   /* Ajoutez les règles #keyframes ici */
   @keyframes down {
     from {
-      background-color: var(--wave-light-blue);
+      background-color: var(--blue4);
 
       height: 100%;
     }
     to {
-      background-color: rgb(62, 106, 163);
-      
-
+      /* background-color: rgb(62, 106, 163); */
+      background-color: var(--blue2);
       height: 0%;
     }
   }
@@ -153,3 +152,6 @@ main{
     /* Ajoutez les options d'animation de la div ici */
     animation-delay: 1150ms;
   }
+.homeText {
+  color: var(--darker-grey);
+}

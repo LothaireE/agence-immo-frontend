@@ -1,8 +1,9 @@
 const EachRealty = ({ eachRealty }) => {
   return (
-    <article className="row col-4">
-      <div className="shadow-sm rounded d-flex flex-column">
-        <span>{eachRealty.type}</span>
+    <article className="row col-4 py-2">
+      <div className="shadow-sm border rounded-1 d-flex flex-column">
+        <span className="border-bottom lh-lg mb-1">{eachRealty.type}</span>
+
         <h4>{eachRealty.address_1}</h4>
         <h5>
           {eachRealty.zipcode}, {eachRealty.city}.

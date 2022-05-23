@@ -1,0 +1,15 @@
+
+input {
+    outline: none;
+}
+#validateBtn {
+    color: white;
+    background: var(--blue4);
+    border: none;}
+
+.formLine {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}

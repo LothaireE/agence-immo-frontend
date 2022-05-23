@@ -6,6 +6,18 @@
   --pink: #F29492;
   --light-grey: #A8ACAE;
   --dark-grey: #a8acae4f;
+  --darker-grey: #24272C;
   --gradient: linear-gradient(90deg, rgba(242,148,146,0.7651162790697674) 0%, rgba(25,127,167,0.4744186046511628) 78%) 0%;
+  --blue1: #03045e;
+  --blue2: #0077b6;
+  --blue3: #00b4d8;
+  --blue4: #90e0ef;
+  --blue5: #caf0f8;
 }
 
+button:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}

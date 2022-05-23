@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const User = ({ user }) => {
-  console.log("each user", user);
+  // console.log("each user", user);
   return (
     <div className="d-flex align-items-start col-4 flex-column p-2">
       {/* <div className="border rounded-3 col-12 p-3"> */}
@@ -12,7 +14,8 @@ const User = ({ user }) => {
         <p>{user.email}</p>
 
         <Link className="text-decoration-none" to={`/user/${user.id}`}>
-          go to
+          <span>go to </span>
+          <FontAwesomeIcon icon="arrow-turn-up" />
         </Link>
       </div>
     </div>

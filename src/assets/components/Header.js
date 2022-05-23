@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
   return (
-    <div className="header-bar border ">
-      <div className="d-flex container align-items-center text-light">
+    <div className="header-bar d-flex">
+      <div className="d-flex justify-content-between container align-items-center text-light">
         <h2 className="pe-3">Immo-Lo</h2>
         <nav className="navigation d-flex">
           <NavLink
@@ -15,7 +15,7 @@ const Header = () => {
             activeClassname="navActive"
           >
             <FontAwesomeIcon icon="house-user" className="pe-1" />
-            <span>Home</span>
+            <span>Accueil</span>
           </NavLink>
 
           <NavLink
@@ -26,7 +26,7 @@ const Header = () => {
           >
             {/* <i className="fas fa-mountain me-1"></i> */}
             <FontAwesomeIcon icon="users" className="me-1" />
-            <span>Users</span>
+            <span>Utilisateurs</span>
           </NavLink>
           <NavLink
             className="px-2 text-light"
@@ -35,7 +35,7 @@ const Header = () => {
             activeClassname="navActive"
           >
             <FontAwesomeIcon icon="book-atlas" className="me-1" />
-            <span>Realties</span>
+            <span>Biens</span>
           </NavLink>
         </nav>
       </div>

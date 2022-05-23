@@ -33,13 +33,16 @@ const Realties = ({ apiUrl }) => {
           `${apiUrl}/realty?type=${type}&page=${page}`
         );
         setRealties(newResponse.data);
-        console.log("newResponse.data", newResponse.data);
+        console.log("newData aka realties", newResponse);
+        // console.log("newResponse.data", newResponse.data);
       } catch (error) {
         console.log(error.message);
       }
     };
+    console.log("realties", realties.page);
     fetchRealty();
   }, [apiUrl, type, page]);
+
   return isLoading ? (
     <div>en cours de chargement</div>
   ) : (
@@ -60,11 +63,21 @@ const Realties = ({ apiUrl }) => {
             })}
         </div>
       </article>
-      <article className="border">
-        <div>
-          <PageBtn page={page} setPage={setPage} />
+      <article>
+        <div className="">
+          {realties && (
+            <div className="d-flex border rounded justify-content-between">
+              <PageBtn
+                page={page}
+                setPage={setPage}
+                totalPages={realties.page}
+                nbRecords={realties.nbRecords}
+              />
+            </div>
+          )}
         </div>
-        <div className="d-flex border col-12 flex-wrap">
+
+        <div className="d-flex justify-content-between  col-12 flex-wrap">
           {realties &&
             realties.records.map((eachRealty, index) => {
               return <EachRealty key={eachRealty.id} eachRealty={eachRealty} />;

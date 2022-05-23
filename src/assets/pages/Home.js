@@ -3,7 +3,27 @@ import "../CSS/Home.css";
 const Home = ({ apiUrl }) => {
   return (
     <main className="d-flex flex-column justify-content-between">
-      <h1 className="text-center py-5">Agence Immo-Lo</h1>
+      <div className="container">
+        <h1 className="text-center py-5">Agence Immo-Lo</h1>
+        <p className="fs-4 text-center homeText">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio
+          magnam corrupti cum ex architecto placeat excepturi sint blanditiis,
+          dolorem ratione voluptates laboriosam sunt culpa officiis quam
+          incidunt! Accusamus, dignissimos culpa! Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Distinctio magnam corrupti cum ex
+          architecto placeat excepturi sint blanditiis, dolorem ratione
+          voluptates laboriosam sunt culpa officiis quam incidunt! Accusamus,
+          dignissimos culpa! Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Distinctio magnam corrupti cum ex architecto placeat excepturi
+          sint blanditiis, dolorem ratione voluptates laboriosam sunt culpa
+          officiis quam incidunt! Accusamus, dignissimos culpa! Lorem ipsum
+          dolor, sit amet consectetur adipisicing elit. Distinctio magnam
+          corrupti cum ex architecto placeat excepturi sint blanditiis, dolorem
+          ratione voluptates laboriosam sunt culpa officiis quam incidunt!
+          Accusamus, dignissimos culpa!
+        </p>
+      </div>
+
       {/* vague */}
       <div id="result">
         <div id="animated_box1" class="box"></div>
