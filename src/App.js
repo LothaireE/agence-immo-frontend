@@ -1,5 +1,4 @@
 import "./App.css";
-// import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./assets/pages/Home.js";
 import Users from "./assets/pages/Users";
@@ -35,7 +34,6 @@ function App() {
         <Route path="/users" element={<Users apiUrl={apiUrl} />} />
         <Route path="/user/:id" element={<User apiUrl={apiUrl} />} />
         <Route path="/adduser" element={<AddUser apiUrl={apiUrl} />} />
-
         <Route path="/realties" element={<Realties apiUrl={apiUrl} />} />
       </Routes>
     </Router>

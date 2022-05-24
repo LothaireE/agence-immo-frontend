@@ -35,8 +35,11 @@ const PageBtn = ({ page, setPage, totalPages, nbRecords }) => {
           id="page-select"
         >
           {pagesArr.map((item, index) => {
-            console.log("item", item);
-            return <option value={item.page}>{item.page}</option>;
+            return (
+              <option key={index} value={item.page}>
+                {item.page}
+              </option>
+            );
           })}
         </select>
       </div>

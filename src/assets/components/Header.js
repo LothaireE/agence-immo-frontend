@@ -8,32 +8,16 @@ const Header = () => {
       <div className="d-flex justify-content-between container align-items-center text-light">
         <h2 className="pe-3">Immo-Lo</h2>
         <nav className="navigation d-flex">
-          <NavLink
-            className="px-2 text-light"
-            exact
-            to="/"
-            activeClassname="navActive"
-          >
+          <NavLink className="px-2 text-light" exact to="/">
             <FontAwesomeIcon icon="house-user" className="pe-1" />
             <span>Accueil</span>
           </NavLink>
 
-          <NavLink
-            className="px-2 text-light"
-            exact
-            to="/users"
-            activeClassname="navActive"
-          >
-            {/* <i className="fas fa-mountain me-1"></i> */}
+          <NavLink className="px-2 text-light" exact to="/users">
             <FontAwesomeIcon icon="users" className="me-1" />
             <span>Utilisateurs</span>
           </NavLink>
-          <NavLink
-            className="px-2 text-light"
-            exact
-            to="/realties"
-            activeClassname="navActive"
-          >
+          <NavLink className="px-2 text-light" exact to="/realties">
             <FontAwesomeIcon icon="book-atlas" className="me-1" />
             <span>Biens</span>
           </NavLink>

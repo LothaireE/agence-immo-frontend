@@ -24,7 +24,6 @@ const AddUser = ({ apiUrl }) => {
           password: password,
         });
 
-        console.log("add userform");
         navigate(`/user/${response.data[0].insertId}`);
       }
     } catch (error) {

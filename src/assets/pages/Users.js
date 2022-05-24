@@ -5,8 +5,6 @@ import UsersList from "../components/UsersList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-// import { button } from "bootstrap";
-
 const Users = ({ apiUrl }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -14,7 +12,6 @@ const Users = ({ apiUrl }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const response = await axios.get(`http://localhost:3000/api/users/`);
         const response = await axios.get(`${apiUrl}/users?page=${page}`);
         setData(response.data);
         setIsLoading(false);
@@ -24,7 +21,6 @@ const Users = ({ apiUrl }) => {
     };
     fetchData();
   }, [apiUrl, page]);
-  //   console.log("data", data);
 
   return isLoading ? (
     <div>en cours de chargement</div>

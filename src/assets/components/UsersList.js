@@ -1,10 +1,6 @@
 import EachUser from "./EachUser.js";
 
 const UsersList = ({ data, setPage }) => {
-  console.log("==>", data);
-
-  // let ceci = [data.page.last]
-
   return (
     <article>
       <div className="d-flex flex-wrap">

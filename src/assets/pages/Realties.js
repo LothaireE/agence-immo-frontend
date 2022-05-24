@@ -30,21 +30,16 @@ const Realties = ({ apiUrl }) => {
     const fetchRealty = async () => {
       try {
         let url = `${apiUrl}/realty?page=${page}`;
-        console.log("type", type);
         if (type !== undefined) {
           url = `${url}&type=${type}`;
         }
         const newResponse = await axios.get(`${url}`);
-        // `${apiUrl}/realty?type=${type}&page=${page}`
 
         setRealties(newResponse.data);
-        console.log("newData aka realties", newResponse);
-        // console.log("newResponse.data", newResponse.data);
       } catch (error) {
         console.log(error.message);
       }
     };
-    console.log("realties", realties.page);
     fetchRealty();
   }, [apiUrl, type, page]);
 

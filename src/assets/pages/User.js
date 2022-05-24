@@ -6,8 +6,7 @@ import UpdateUserForm from "../components/UpdateUserForm.js";
 import "../CSS/User.css";
 const User = ({ apiUrl }) => {
   const { id } = useParams();
-  console.log("apiUrl", apiUrl);
-  console.log(id);
+
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
@@ -118,19 +117,6 @@ const User = ({ apiUrl }) => {
             </div>
           </article>
         )}
-        {/* <article>
-          <h5>Supprimer l'utilisateur</h5>
-          <div className="d-flex border rounded justify-content-end">
-            <button
-              className="btn btn-danger col-2 me-2 my-2"
-              onClick={() => {
-                setModal(true);
-              }}
-            >
-              Delete user
-            </button>
-          </div>
-        </article> */}
       </section>
     </div>
   );

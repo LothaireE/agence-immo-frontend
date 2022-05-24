@@ -23,8 +23,6 @@ const UpdateForm = ({ apiUrl, id, refresh, setRefresh }) => {
           email: email,
           password: password,
         });
-
-        console.log(response.data);
         setRefresh(refresh + 1);
       }
     } catch (error) {
@@ -32,7 +30,6 @@ const UpdateForm = ({ apiUrl, id, refresh, setRefresh }) => {
     }
   };
 
-  console.log("props", apiUrl, id);
   return (
     <form
       className="rounded border py-4 my-2  d-flex  flex-column align-items-center"
