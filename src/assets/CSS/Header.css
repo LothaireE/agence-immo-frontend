@@ -2,3 +2,6 @@
     background-color:  var(--blue3);
     height: 7.5vh;
 }
+nav {
+    font-size: 1.25rem;
+}

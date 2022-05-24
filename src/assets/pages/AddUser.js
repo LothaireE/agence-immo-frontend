@@ -8,7 +8,6 @@ const AddUser = ({ apiUrl }) => {
   const [password, setPassword] = useState();
   const [checkPassword, setCheckPassword] = useState();
   const [errorMessage, setErrormessage] = useState(false);
-  // const [newUserId, setNewUserId] = useState(undefined);
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -26,12 +25,8 @@ const AddUser = ({ apiUrl }) => {
         });
 
         console.log("add userform");
-        // setNewUserId(response.data[0].insertId);
         navigate(`/user/${response.data[0].insertId}`);
       }
-      // if (newUserId !== undefined) {
-      //   navigate(`/user/${newUserId}`);
-      // }
     } catch (error) {
       console.log(error.message);
     }

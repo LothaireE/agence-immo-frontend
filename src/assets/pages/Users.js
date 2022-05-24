@@ -38,10 +38,17 @@ const Users = ({ apiUrl }) => {
           totalPages={data.page}
           nbRecords={data.nbRecords}
         />
-        <Link to="/adduser" className="btn btn-light border-0  my-1 me-1">
+        <Link
+          to="/adduser"
+          className="btn btn-light border-0 my-1 me-1 d-flex align-items-center"
+        >
           <FontAwesomeIcon icon="plus" className="pe-1" />
           Ajouter un nouvel utilisateur
         </Link>
+        {/* <Link to={"/adduser"}>
+          <FontAwesomeIcon icon="plus" className="pe-1" />
+          aller à
+        </Link> */}
       </div>
 
       {data && <UsersList data={data} setPage={setPage} />}

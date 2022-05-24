@@ -63,9 +63,9 @@ const Realties = ({ apiUrl }) => {
             })}
         </div>
       </article>
-      <article>
-        <div className="">
-          {realties && (
+      <section>
+        <div>
+          {type && (
             <div className="d-flex border rounded justify-content-between">
               <PageBtn
                 page={page}
@@ -83,7 +83,7 @@ const Realties = ({ apiUrl }) => {
               return <EachRealty key={eachRealty.id} eachRealty={eachRealty} />;
             })}
         </div>
-      </article>
+      </section>
     </div>
   );
 };

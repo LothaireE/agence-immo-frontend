@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import UpdateUserForm from "../components/UpdateUserForm.js";
+import "../CSS/User.css";
 const User = ({ apiUrl }) => {
   const { id } = useParams();
   console.log("apiUrl", apiUrl);
@@ -44,15 +45,21 @@ const User = ({ apiUrl }) => {
         <h5>Utilisateur</h5>
         <article className="rounded border py-3 my-2 d-flex justify-content-between">
           <div className="mx-2 col-6">
-            <h4>
-              Nom : {data[0].firstname} {data[0].lastname}
-            </h4>
-            <p>Adresse email : {data[0].email}</p>
+            <p className="fs-3 lh-1">
+              <span className="key">Nom :</span> {data[0].firstname}
+            </p>
+            <p className="fs-3 lh-1">
+              <span className="key">Prénom :</span> {data[0].lastname}
+            </p>
+            <p className="fs-5">
+              <span className="key">Adresse email :</span> {data[0].email}
+            </p>
           </div>
         </article>
 
         <article>
           <h5>Modifier les informations utilisateur</h5>
+          <span>* remplir les champs que vous souhaitez modifier</span>
           <UpdateUserForm
             apiUrl={apiUrl}
             id={id}

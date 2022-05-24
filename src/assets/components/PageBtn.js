@@ -26,7 +26,7 @@ const PageBtn = ({ page, setPage, totalPages, nbRecords }) => {
           Aller à la page :
         </label>
         <select
-          className="custom-select"
+          className="custom-select rounded-end border-light"
           onChange={(event) => {
             setPage(event.target.value);
           }}
@@ -36,11 +36,7 @@ const PageBtn = ({ page, setPage, totalPages, nbRecords }) => {
         >
           {pagesArr.map((item, index) => {
             console.log("item", item);
-            return (
-              <option className="border-2" value={item.page}>
-                {item.page}
-              </option>
-            );
+            return <option value={item.page}>{item.page}</option>;
           })}
         </select>
       </div>
