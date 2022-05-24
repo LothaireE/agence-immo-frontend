@@ -45,10 +45,6 @@ const Users = ({ apiUrl }) => {
           <FontAwesomeIcon icon="plus" className="pe-1" />
           Ajouter un nouvel utilisateur
         </Link>
-        {/* <Link to={"/adduser"}>
-          <FontAwesomeIcon icon="plus" className="pe-1" />
-          aller à
-        </Link> */}
       </div>
 
       {data && <UsersList data={data} setPage={setPage} />}

@@ -29,9 +29,14 @@ const Realties = ({ apiUrl }) => {
   useEffect(() => {
     const fetchRealty = async () => {
       try {
-        const newResponse = await axios.get(
-          `${apiUrl}/realty?type=${type}&page=${page}`
-        );
+        let url = `${apiUrl}/realty?page=${page}`;
+        console.log("type", type);
+        if (type !== undefined) {
+          url = `${url}&type=${type}`;
+        }
+        const newResponse = await axios.get(`${url}`);
+        // `${apiUrl}/realty?type=${type}&page=${page}`
+
         setRealties(newResponse.data);
         console.log("newData aka realties", newResponse);
         // console.log("newResponse.data", newResponse.data);
@@ -65,7 +70,7 @@ const Realties = ({ apiUrl }) => {
       </article>
       <section>
         <div>
-          {type && (
+          {realties && (
             <div className="d-flex border rounded justify-content-between">
               <PageBtn
                 page={page}
