@@ -32,13 +32,11 @@ main{
     position: absolute;
     left: 0;
     bottom: 0;
-    /* Faut-il préciser des informations d'animation communes ici ??? */
-    /* Peut-être... */
-    /* ... ou peut-être pas :P */
+
     transform-origin: bottom;
     animation-name: down;
     animation-duration: 1200ms;
-    animation-timing-function: steps();
+
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
   }
