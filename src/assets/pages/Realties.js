@@ -10,6 +10,8 @@ const Realties = ({ apiUrl }) => {
   const [page, setPage] = useState(1);
   const [type, setType] = useState(undefined);
   const [realties, setRealties] = useState("");
+
+  // 1
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -25,7 +27,7 @@ const Realties = ({ apiUrl }) => {
     };
     fetchData();
   }, [apiUrl]);
-
+  // 2
   useEffect(() => {
     const fetchRealty = async () => {
       try {
@@ -58,6 +60,7 @@ const Realties = ({ apiUrl }) => {
                   apiUrl={apiUrl}
                   type={type}
                   setType={setType}
+                  setPage={setPage}
                 />
               );
             })}

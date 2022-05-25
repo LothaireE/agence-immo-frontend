@@ -9,20 +9,29 @@ const PageBtn = ({ page, setPage, totalPages, nbRecords }) => {
     <section className="d-flex my-2  col-8">
       <div className="col-8 d-flex justify-content-around">
         {page >= 2 && (
-          <button class="btn btn-light col-5" onClick={() => setPage(page - 1)}>
+          <button
+            className="btn btn-light col-5"
+            onClick={() => setPage(page - 1)}
+          >
             Page précédente
           </button>
         )}
 
         {page < totalPages.last && (
-          <button class="btn btn-light col-5" onClick={() => setPage(page + 1)}>
+          <button
+            className="btn btn-light col-5"
+            onClick={() => setPage(page + 1)}
+          >
             Page suivante
           </button>
         )}
       </div>
 
       <div className="col-4 input-group ">
-        <label className="input-group-text border-0 bg-light" for="page-select">
+        <label
+          className="input-group-text border-0 bg-light"
+          htmlFor="page-select"
+        >
           Aller à la page :
         </label>
         <select
